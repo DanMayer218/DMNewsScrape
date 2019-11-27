@@ -26,7 +26,7 @@ module.exports = function(app) {
     // post
     app.post("/api/scrape", function(req, res) {
 
-        request("http://www.npr.org/sections/news/", function(error, response, html) {
+        request("https://www.theartnewspaper.com/", function(error, response, html) {
 
             const $ = cheerio.load(html);
 
