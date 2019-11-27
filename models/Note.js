@@ -14,4 +14,4 @@ const NoteSchema = new Schema({
 const Note = mongoose.model("Note", NoteSchema);
 
 module.exports = Note;
-© 2019 GitHub, Inc.
+// © 2019 GitHub, Inc.

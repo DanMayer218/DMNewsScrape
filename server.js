@@ -12,7 +12,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 
 var app = express();
 
-app.use(logger("dev"));
+// app.use(logger("dev"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
