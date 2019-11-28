@@ -26,7 +26,7 @@ module.exports = function(app) {
     // post
     app.post("/api/scrape", function(req, res) {
 
-        request("https://www.theartnewspaper.com/", function(error, response, html) {
+        request("https://www.nydailynews.com/", function(error, response, html) {
 
             const $ = cheerio.load(html);
 
@@ -35,7 +35,7 @@ module.exports = function(app) {
             $("article.item").each(function(i, element) {
 
 
-                let headline = $(element).find('.item-info').find('.title').find('a').text();
+                let headline = $(element).find('.item-info').find('.cp-preview-headline').find('a').text();
                 let summary = $(element).find('.item-info').find('.teaser').find('a').text();
                 let link = $(element).find('.item-info').find('.title').children().attr("href");
                 let photo = $(element).find('.item-image').find('.imagewrap').find('a').find('img').attr("src");
